@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BeitTigreAI – NLP for the Tigre Language</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9fb;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #0057b7;
+      padding-bottom: 20px;
+    }
+    h1 {
+      color: #0057b7;
+    }
+    h2 {
+      color: #0057b7;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      margin-top: 30px;
+    }
+    h3 {
+      color: #333;
+    }
+    a {
+      color: #0057b7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 5px;
+      font-size: 14px;
+      background-color: #eee;
+      border-radius: 6px;
+    }
+    .badge-green {
+      background-color: #c8e6c9;
+    }
+    .badge-blue {
+      background-color: #bbdefb;
+    }
+    .citation {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 4px solid #0057b7;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #e3f2fd;
+    }
+    .disclaimer {
+      background-color: #fff3cd;
+      padding: 15px;
+      border: 1px solid #ffeaa7;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    .acknowledgments {
+      font-style: italic;
+      color: #555;
+    }
+    .license {
+      background-color: #e8f5e8;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BeitTigreAI</h1>
+    <p><strong>Beit</strong> (ቤት) means "home" or "hub" in Tigre.</p>
+    <p>A home for Artificial Intelligence resources dedicated to the <strong>Tigre language</strong> — a living sister of the ancient Geez language.</p>
+    <div>
+      <span class="badge badge-blue"><a href="https://creativecommons.org/licenses/by-sa/4.0/">License: CC BY-SA 4.0</a></span>
+      <span class="badge badge-green"><a href="#cite">Cite This Work</a></span>
+    </div>
+  </header>
+
+  <section>
+    <h2>📚 Overview</h2>
+    <p>
+      The <strong>Tigre language</strong>, spoken in Eritrea and eastern Sudan, is the closest living relative to <strong>Classical Geez</strong> — a liturgical and historical language of immense cultural and religious significance. While Geez is no longer spoken, <strong>Tigre remains vibrant</strong>, with growing digital content on platforms like:
+    </p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Tigre_language">Wikipedia</a></li>
+      <li><a href="https://commonvoice.mozilla.org/">Mozilla Common Voice</a></li>
+      <li><a href="https://tatoeba.org/">Tatoeba</a></li>
+      <li>Radio, TV, newspapers, and literature</li>
+    </ul>
+    <p>
+      Despite this vitality, <strong>Tigre has been underrepresented in Natural Language Processing (NLP)</strong>. This project aims to close that gap by providing open-access <strong>data, models, and tools</strong> for researchers, developers, and the Tigre-speaking community.
+    </p>
+    <p>
+      Additionally, because of its linguistic proximity to Geez, advances in <strong>Tigre NLP</strong> can serve as a <strong>bridge to understanding and potentially revitalizing Geez</strong>.
+    </p>
+  </section>
+
+  <section>
+    <h2>🧩 Data</h2>
+    <p>We have compiled a diverse corpus from multiple sources to support robust model training:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Sources</th>
+      </tr>
+      <tr>
+        <td><strong>1. Speech</strong></td>
+        <td>Audio recordings in Tigre</td>
+        <td>Common Voice, field recordings, radio archives</td>
+      </tr>
+      <tr>
+        <td><strong>2. Speech/Text</strong></td>
+        <td>Aligned audio-transcript pairs</td>
+        <td>Common Voice, broadcast subtitles</td>
+      </tr>
+      <tr>
+        <td><strong>3. Text</strong></td>
+        <td>Monolingual written Tigre</td>
+        <td>Books, news, Wikipedia, social media, religious texts</td>
+      </tr>
+      <tr>
+        <td><strong>4. Parallel Data (Translation)</strong></td>
+        <td>Bilingual sentence pairs (e.g., Tigre–English, Tigre–Arabic)</td>
+        <td>Tatoeba, translated documents, crowdsourced efforts</td>
+      </tr>
+    </table>
+    <p><strong>Note:</strong> All data is curated, cleaned, and made available in standard formats (e.g., <code>.txt</code>, <code>.csv</code>, <code>.jsonl</code>, <code>.wav</code>).</p>
+  </section>
+
+  <section>
+    <h2>🤖 Trained Models</h2>
+    <p>We leverage state-of-the-art frameworks to develop accessible, high-performance models for Tigre:</p>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Description</th>
+        <th>Framework / Base Model</th>
+      </tr>
+      <tr>
+        <td><strong>1. Machine Translation</strong></td>
+        <td>Translate between Tigre and other languages</td>
+        <td>Meta's <a href="https://ai.meta.com/research/publications/no-language-left-behind/">NLLB</a> / <a href="https://ai.meta.com/sonar/">Sonar</a></td>
+      </tr>
+      <tr>
+        <td><strong>2. Automatic Speech Recognition (ASR)</strong></td>
+        <td>Speech-to-text for Tigre</td>
+        <td>Meta's <a href="https://ai.meta.com/research/publications/wav2vec-2-0-a-framework-for-self-supervised-learning-of-speech-representations/">Wav2Vec2-BERT</a></td>
+      </tr>
+      <tr>
+        <td><strong>3. Text-to-Speech (TTS)</strong></td>
+        <td>Synthesize natural-sounding Tigre speech</td>
+        <td><a href="https://github.com/rhasspy/piper">rhasspy/piper</a></td>
+      </tr>
+      <tr>
+        <td><strong>4. Large Language Model (LLM)</strong></td>
+        <td>Generative AI for Tigre text</td>
+        <td><strong>Llama 3.2-based</strong>, fine-tuned (in progress)</td>
+      </tr>
+    </table>
+    <p><strong>Note:</strong> The LLM is currently under development. Early checkpoints will be released soon.</p>
+    <p>All models are available for download and inference via <a href="https://huggingface.co">Hugging Face</a> or direct links.</p>
+  </section>
+
+  <section>
+    <h2>🔗 Access & Usage</h2>
+    <ul>
+      <li><strong>Data & Models:</strong> <a href="#">[Link to Hugging Face / Google Drive / Zenodo]</a></li>
+      <li><strong>Notebooks & Demos:</strong> <a href="#">Google Colab Examples</a> (e.g., ASR inference, translation demo)</li>
+      <li><strong>Training Code:</strong> See <code>/training</code> directory</li>
+      <li><strong>Inference Scripts:</strong> See <code>/inference</code> for easy deployment</li>
+    </ul>
+  </section>
+
+  <section id="cite">
+    <h2>📚 Citing This Work</h2>
+    <p>If you use this data or models in your research, please cite:</p>
+    <div class="citation">
+      @misc{beittigreai2025,<br>
+      &nbsp;&nbsp;author       = {Your Name},<br>
+      &nbsp;&nbsp;title        = {BeitTigreAI: NLP Resources for the Tigre Language},<br>
+      &nbsp;&nbsp;year         = {2025},<br>
+      &nbsp;&nbsp;howpublished = {\url{https://github.com/yourusername/BeitTigreAI}},<br>
+      &nbsp;&nbsp;note         = {Accessed: 2025-MM-DD}<br>
+      }
+    </div>
+  </section>
+
+  <section>
+    <h2>⚠️ Disclaimer</h2>
+    <div class="disclaimer">
+      This project is a research effort and not officially affiliated with any government or institution. Model outputs may contain errors, especially for low-resource language tasks. Use with critical evaluation.
+    </div>
+  </section>
+
+  <section>
+    <h2>🙏 Acknowledgments</h2>
+    <p class="acknowledgments">
+      We gratefully acknowledge:<br>
+      • The <strong>Tigre-speaking community</strong> for their contributions to language preservation.<br>
+      • Open-source projects: <strong>Common Voice</strong>, <strong>Tatoeba</strong>, <strong>Hugging Face</strong>, <strong>Meta AI</strong>, <strong>Piper TTS</strong>, <strong>NLLB</strong>.<br>
+      • Researchers and linguists supporting African language technologies.<br>
+      • Volunteers who contributed transcriptions, translations, and audio.
+    </p>
+  </section>
+
+  <section>
+    <h2>📄 License</h2>
+    <div class="license">
+      This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br><br>
+      You are free to:<br>
+      • <strong>Share</strong> — copy and redistribute the material<br>
+      • <strong>Adapt</strong> — remix, transform, and build upon the material<br><br>
+      Under the following terms:<br>
+      • <strong>Attribution</strong> — You must give appropriate credit.<br>
+      • <strong>ShareAlike</strong> — If you remix, you must distribute under the same license.
+    </div>
+  </section>
+
+  <footer>
+    <p>🏠 <strong>Beit Tigre AI</strong> — Building the Future of a Living Language</p>
+    <p>💬 Have feedback? Want to contribute? <a href="https://github.com/yourusername/BeitTigreAI">Open an issue or pull request!</a></p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p><em>Last updated: April 2025</em></p>
+  </footer>
+
+</body>
+</html>
