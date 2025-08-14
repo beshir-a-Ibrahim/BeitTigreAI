@@ -127,109 +127,123 @@ We gratefully acknowledge the Tigre-speaking community for their enduring commit
   </section>
 
 
-  <section>
-  <h2>🧩 Data</h2>
+<section>
+  <h2>🧩 Data, Models & Resources</h2>
   <table>
     <thead>
       <tr>
-        <th>Content Type</th>
-        <th>Approximate Size</th>
+        <th>Category</th>
+        <th>Type</th>
+        <th>Size / Details</th>
         <th>Description</th>
-        <th>URI</th>
+        <th>Framework / URI</th>
       </tr>
     </thead>
     <tbody>
+      <!-- Data -->
       <tr>
-        <td><strong>Speech</strong></td>
+        <td><strong>Data</strong></td>
+        <td>Speech</td>
         <td>800 hours</td>
         <td>Native speaker audio recordings in various Tigre dialects</td>
         <td>coming soon</td>
       </tr>
       <tr>
-        <td><strong>Speech/Text (Aligned)</strong></td>
+        <td><strong>Data</strong></td>
+        <td>Speech/Text (Aligned)</td>
         <td>40 hours</td>
         <td>Time-aligned speech and transcription pairs</td>
         <td>coming soon</td>
       </tr>
       <tr>
-        <td><strong>Monolingual Text</strong></td>
+        <td><strong>Data</strong></td>
+        <td>Monolingual Text</td>
         <td>15 million tokens</td>
         <td>Unsupervised text corpus including books, articles, and online publications</td>
         <td>coming soon</td>
       </tr>
       <tr>
-        <td><strong>Parallel Text</strong></td>
+        <td><strong>Data</strong></td>
+        <td>Parallel Text</td>
         <td>250,000 sentence pairs</td>
         <td>Multi-lingual parallel sentences</td>
         <td>coming soon</td>
       </tr>
-    </tbody>
-  </table>
-</section>
-  
-  <section>
-    <h2>🤖 Trained Models</h2>
-    <table>
-      <tr><th>Model</th><th>Description</th><th>Framework</th></tr>
-      <tr><td><strong>MT</strong></td><td>Translation (Tigre ↔ others)</td><td><a href="https://ai.meta.com/research/publications/no-language-left-behind/">NLLB</a> / <a href="https://ai.meta.com/sonar/">Sonar</a></td></tr>
-      <tr><td><strong>ASR</strong></td><td>Speech-to-text</td><td><a href="https://ai.meta.com/research/wav2vec2-bert/">Wav2Vec2-BERT</a></td></tr>
-      <tr><td><strong>TTS</strong></td><td>Text-to-speech</td><td><a href="https://github.com/rhasspy/piper">rhasspy/piper</a></td></tr>
-      <tr><td><strong>LLM</strong></td><td>Generative AI</td><td>Llama 3.2-based (in progress)</td></tr>
-    </table>
-  </section>
 
-
-  <section>
-  <h2>🤖 Other Resources</h2>
-  <table>
-    <thead>
+      <!-- Trained Models -->
       <tr>
-        <th>Resource Type</th>
-        <th>Description</th>
-        <th>Size / Details</th>
-        <th>URI</th>
+        <td><strong>Trained Models</strong></td>
+        <td>MT (Machine Translation)</td>
+        <td>—</td>
+        <td>Translation (Tigre ↔ others)</td>
+        <td>
+          <a href="https://ai.meta.com/research/publications/no-language-left-behind/" target="_blank" rel="noopener">NLLB</a> / 
+          <a href="https://ai.meta.com/sonar/" target="_blank" rel="noopener">Sonar</a>
+        </td>
       </tr>
-    </thead>
-    <tbody>
       <tr>
-        <td><strong>Dictionary</strong></td>
-        <td>A trilingual dictionary with approximately 6,200 entries in Tigre, Tigrinya, and English, by Memher Mussie Bekheit</td>
+        <td><strong>Trained Models</strong></td>
+        <td>ASR (Speech-to-text)</td>
+        <td>—</td>
+        <td>Automatic Speech Recognition</td>
+        <td>
+          <a href="https://ai.meta.com/research/wav2vec2-bert/" target="_blank" rel="noopener">Wav2Vec2-BERT</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Trained Models</strong></td>
+        <td>TTS (Text-to-speech)</td>
+        <td>—</td>
+        <td>Synthesizes speech from text</td>
+        <td>
+          <a href="https://github.com/rhasspy/piper" target="_blank" rel="noopener">rhasspy/piper</a>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Trained Models</strong></td>
+        <td>LLM (Generative AI)</td>
+        <td>—</td>
+        <td>Large Language Model for Tigre</td>
+        <td>Llama 3.2-based (in progress)</td>
+      </tr>
+
+      <!-- Other Resources -->
+      <tr>
+        <td><strong>Other Resources</strong></td>
+        <td>Dictionary</td>
         <td>~6,200 entries</td>
-        <td>
-  coming soon
-        </td>
+        <td>A trilingual dictionary with approximately 6,200 entries in Tigre, Tigrinya, and English, by Memher Mussie Bekheit</td>
+        <td>coming soon</td>
       </tr>
       <tr>
-        <td><strong>Language Model (kenLM)</strong></td>
-        <td>Statistical n-gram language model trained on monolingual Tigre text, used in ASR and NLP pipelines.</td>
+        <td><strong>Other Resources</strong></td>
+        <td>Language Model (kenLM)</td>
         <td>5-gram model (~1.2 GB)</td>
-        <td>
-          comming soon
-        </td>
+        <td>Statistical n-gram language model trained on monolingual Tigre text, used in ASR and NLP pipelines.</td>
+        <td>coming soon</td>
       </tr>
       <tr>
-        <td><strong>Word Embeddings (fastText)</strong></td>
-        <td>300-dimensional fastText vectors for Tigre, supporting subword modeling and morphological understanding.</td>
+        <td><strong>Other Resources</strong></td>
+        <td>Word Embeddings (fastText)</td>
         <td>300D vectors</td>
+        <td>300-dimensional fastText vectors for Tigre, supporting subword modeling and morphological understanding.</td>
         <td>
           <a href="https://huggingface.co/beshir-a-Ibrahim" target="_blank" rel="noopener">huggingface.co/beshir-a-Ibrahim</a><br>
           <em>coming soon</em>
         </td>
       </tr>
       <tr>
-        <td><strong>Lexicon (Segmented)</strong></td>
-        <td>Segmented lexicon for NLP tasks: text normalization, grapheme-to-phoneme (G2P), morphological parsing, phonetic analysis, and speech processing (ASR/TTS).</td>
+        <td><strong>Other Resources</strong></td>
+        <td>Lexicon (Segmented)</td>
         <td>~6,200 entries</td>
-        <td>
-          <em>coming soon</em>
-        </td>
+        <td>Segmented lexicon for NLP tasks: text normalization, grapheme-to-phoneme (G2P), morphological parsing, phonetic analysis, and speech processing (ASR/TTS).</td>
+        <td><em>coming soon</em></td>
       </tr>
     </tbody>
   </table>
 </section>
-  
-  
 
+  
   <h2 id="reference">Reference</h2>
   
 
